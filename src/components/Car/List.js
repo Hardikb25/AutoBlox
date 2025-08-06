@@ -487,7 +487,7 @@ const handleKentakenInput = (e) => {
     tempStockControllerCompanyId = -1;
     tempStockStatus = -1;
     tempMemoType = -1;
-    tempcarStatus = -1;
+    tempcarStatus = 0;
     tempExtStockStatusSource = null;
     tempExtStockStatus = null;
     tempDaysOnStockFrom = -1;
