@@ -1,6 +1,6 @@
 const CONSTANT = {
     LOCAL_API_URL: "https://localhost:7277/api",
-    PRODUCTION_API_URL:"http://autobloxbackend-1667977100.eu-west-1.elb.amazonaws.com:5000/api",
+    PRODUCTION_API_URL:"https://api.autobloxv2.devoffice.nl/api",
     PAGENUMBERLIMIT: 20,
     PAGINATION :5,
     ISPRODUCTIONENV:true,
