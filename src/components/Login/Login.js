@@ -1,6 +1,6 @@
 import React, {useState } from "react";
 import { getRequest, postRequest } from "../ApiCalls";
-import { Navigate,useNavigate  } from "react-router-dom";
+import { Navigate,useNavigate ,useLocation  } from "react-router-dom";
 import CONSTANT from "../Global";
  import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,6 +11,9 @@ function Login() {
   const [item, setItem] = useState({ username: "", password: "" });
   const [redirectTo,setRedirectTo] = useState("");
   const history = useNavigate();
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const redirectLink = params.get("redirectLink") || "/dashboard";
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -42,7 +45,7 @@ function Login() {
             localStorage.setItem("UserCompanyType",res.model.CompanyType) 
             localStorage.setItem("UserName", res.model.userFullName);
 
-            history("/dashboard",{state:item.username});
+            history(redirectLink,{state:item.username,replace: true});
           }).catch((error) =>{
             console.log(error);
           });

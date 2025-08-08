@@ -7,7 +7,7 @@ export const getUrl =() =>{
   
 }
 
-const IsTokenValid = () => {
+export const IsTokenValid = () => {
   var Jwttoken = localStorage.getItem("JwtToken");
   if(Jwttoken !== undefined && Jwttoken != "null"){
     let decodedToken = JSON.parse(atob(Jwttoken.split(".")[1]));
