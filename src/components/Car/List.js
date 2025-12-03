@@ -240,26 +240,26 @@ function CarList(props) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleScroll = () => {
     const currentRec = listViewRef.current.querySelector(".table-responsive")
+    // Infinite scroll commented
+    // if (currentRec) {
+    //   const { scrollTop, scrollHeight, clientHeight } = currentRec;
 
-    if (currentRec) {
-      const { scrollTop, scrollHeight, clientHeight } = currentRec;
+    //   const roundedScrollTop = Math.round(scrollTop + clientHeight);
+    //   const roundedScrollHeight = Math.round(scrollHeight);
 
-      const roundedScrollTop = Math.round(scrollTop + clientHeight);
-      const roundedScrollHeight = Math.round(scrollHeight);
-
-      if (roundedScrollTop >= roundedScrollHeight - 1) {
-        let pagecount = TotalRecords < maxPageLimit ? 1 : Math.ceil(TotalRecords / pageNumberLimit)
-        if (currentPage === lastTriggeredPageRef.current) {
-          lastTriggeredPageRef.current += 1;
-          if (currentPage < pagecount) {
-            onNextClick();
+    //   if (roundedScrollTop >= roundedScrollHeight - 1) {
+    //     let pagecount = TotalRecords < maxPageLimit ? 1 : Math.ceil(TotalRecords / pageNumberLimit)
+    //     if (currentPage === lastTriggeredPageRef.current) {
+    //       lastTriggeredPageRef.current += 1;
+    //       if (currentPage < pagecount) {
+    //         onNextClick();
 
 
-          }
-        }
-      }
+    //       }
+    //     }
+    //   }
 
-    }
+    // }
   };
 
   const throttle = (func, limit) => {
@@ -1144,7 +1144,7 @@ const handleKentakenInput = (e) => {
           <p className="mb-0">
             Ophalen RDW bedrijfsvoorraad (bron: VWE) tarief pm € 0,00
           </p>
-          <p className="mb-0">Last update: 02 - 02 - 2024 06:34:13</p>
+          <p className="mb-0">Last update: 01 - 12 - 2025 06:34:13</p>
         </div>
         <section className="midSec">
           <div className="container">
