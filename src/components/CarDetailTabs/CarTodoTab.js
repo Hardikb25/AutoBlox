@@ -374,7 +374,7 @@ const onPageChange = (pageNumber) => {
 
   const OnChangeDate = (event) => {
     setSaleDate(event);
-  };
+  };  
   const GetCarDocs = () => {
     setLoading(true);
     getRequest({
@@ -476,6 +476,7 @@ const onPageChange = (pageNumber) => {
                     className="btn-close text-white"
                     data-bs-dismiss="modal"
                     aria-label="Close"
+                    onClick={handleCompanySearchRemove}
                   ></button>
                 </div>
 
