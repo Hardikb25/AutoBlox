@@ -80,22 +80,23 @@ function ReadyForSale(props) {
 
   const handleScroll = () => {
     const currentRec = listViewRef.current.querySelector(".table-responsive")
-    if (currentRec) {
-      const { scrollTop, scrollHeight, clientHeight } = currentRec;
+    //Infinite scroll commented
+    // if (currentRec) {
+    //   const { scrollTop, scrollHeight, clientHeight } = currentRec;
 
-      const roundedScrollTop = Math.round(scrollTop + clientHeight);
-      const roundedScrollHeight = Math.round(scrollHeight);
+    //   const roundedScrollTop = Math.round(scrollTop + clientHeight);
+    //   const roundedScrollHeight = Math.round(scrollHeight);
 
-      if (roundedScrollTop >= roundedScrollHeight - 1) {
-        let pagecount = TotalRecords < maxPageLimit ? 1 : Math.ceil(TotalRecords / pageNumberLimit)
-        if (currentPage === lastTriggeredPageRef.current) {
-          lastTriggeredPageRef.current += 1;
-          if (currentPage < pagecount) {
-            onNextClick();
-          }
-        }
-      }
-    }
+    //   if (roundedScrollTop >= roundedScrollHeight - 1) {
+    //     let pagecount = TotalRecords < maxPageLimit ? 1 : Math.ceil(TotalRecords / pageNumberLimit)
+    //     if (currentPage === lastTriggeredPageRef.current) {
+    //       lastTriggeredPageRef.current += 1;
+    //       if (currentPage < pagecount) {
+    //         onNextClick();
+    //       }
+    //     }
+    //   }
+    // }
   };
 
   React.useEffect(() => {
