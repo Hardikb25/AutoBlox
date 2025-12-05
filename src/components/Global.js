@@ -1,7 +1,7 @@
 const CONSTANT = {
     LOCAL_API_URL: "https://localhost:7277/api",
-    /*PRODUCTION_API_URL:"https://api.autobloxv2.devoffice.nl/api",*/
-    PRODUCTION_API_URL:"http://autobloxv2-api-env.eba-sjkckpfk.eu-west-1.elasticbeanstalk.com/api",
+    PRODUCTION_API_URL:"https://api.autobloxv2.devoffice.nl/api",
+    /*PRODUCTION_API_URL:"http://autobloxv2-api-env.eba-sjkckpfk.eu-west-1.elasticbeanstalk.com/api",*/
     PAGENUMBERLIMIT: 20,
     PAGINATION :5,
     ISPRODUCTIONENV:true,
